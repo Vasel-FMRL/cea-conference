@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0C2427">
+<link rel="icon" type="image/png" href="assets/logos/cea-mark.png">
+<link rel="apple-touch-icon" href="assets/logos/cea-mark.png">
+<meta property="og:title" content="CEA 2027 · Cleaner Earth &amp; Atmosphere Conference">
+<meta property="og:description" content="The 10th Annual Cleaner Earth &amp; Atmosphere Conference, June 17–18, 2027, University of Windsor, Canada.">
+<meta property="og:image" content="media/poster.jpg">
+<meta property="og:type" content="website">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>CEA 2027 Conference</title>
+<meta name="description" content="The 10th Annual Cleaner Earth & Atmosphere Conference (CEA 2027), June 17–18, 2027, hosted by the Turbulence and Energy Laboratory at the University of Windsor, Canada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single scrolling programme booklet. Streamline-field hero, then sections on a 12-col grid, sticky section nav. */
+:root{
+  --bg:#F3F6F5;          /* glacier paper */
+  --surface:#FFFFFF;
+  --ink:#0F2426;         /* spruce ink */
+  --muted:#4B6164;
+  --line:#D3DEDC;
+  --accent:#0F6E78;      /* lake teal */
+  --accent-ink:#FFFFFF;
+  --sun:#E39B2D;         /* solar amber, CTA + "next" markers */
+  --sun-ink:#1E1404;
+  --hero-bg:#0C2427;
+  --hero-fg:#E7F1EF;
+  --hero-muted:#9FB9B6;
+  --soft:#E4EEEC;
+  --font-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body:"Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --step--1:.875rem; --step-0:1.0625rem; --step-1:1.3rem; --step-2:1.7rem; --step-3:2.3rem; --step-4:clamp(2.6rem,6vw,4.6rem);
+  --max:1180px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1A1C; --surface:#112426; --ink:#E3EEEC; --muted:#9BB3B0; --line:#22393B;
+  --accent:#4FC1C9; --accent-ink:#06191B; --sun:#F0AE4A; --sun-ink:#1E1404;
+  --hero-bg:#071416; --hero-fg:#E7F1EF; --hero-muted:#93AEAB; --soft:#16302F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1A1C; --surface:#112426; --ink:#E3EEEC; --muted:#9BB3B0; --line:#22393B;
+  --accent:#4FC1C9; --accent-ink:#06191B; --sun:#F0AE4A; --sun-ink:#1E1404;
+  --hero-bg:#071416; --hero-fg:#E7F1EF; --hero-muted:#93AEAB; --soft:#16302F; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:var(--step-0);line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--hero-bg)}
+h1,h2,h3{font-family:var(--font-display);line-height:1.12;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h2{font-size:var(--step-3);font-weight:800}
+h3{font-size:var(--step-1);font-weight:700}
+p{margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.lede{font-size:var(--step-1);color:var(--muted);max-width:62ch;line-height:1.5}
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:.8em 1.25em;border-radius:999px;font-weight:700;text-decoration:none;font-size:1rem;border:2px solid transparent;transition:transform .15s ease, background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-sun{background:var(--sun);color:var(--sun-ink)}
+.btn-ghost{border-color:currentColor;color:inherit}
+.btn-accent{background:var(--accent);color:var(--accent-ink)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--hero-bg) 92%,transparent);backdrop-filter:blur(10px);color:var(--hero-fg);border-bottom:1px solid color-mix(in srgb,var(--hero-fg) 12%,transparent)}
+.top .wrap{display:flex;align-items:center;gap:1rem;min-height:64px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;font-family:var(--font-display);font-weight:800;font-size:1.15rem;flex-shrink:0}
+.brand svg{width:34px;height:34px}
+.brand small{display:block;font-family:var(--font-mono);font-weight:400;font-size:.68rem;letter-spacing:.1em;color:var(--hero-muted)}
+.nav{display:flex;gap:.15rem;margin-left:auto;align-items:center}
+.nav a{color:var(--hero-fg);text-decoration:none;font-size:.95rem;padding:.45rem .6rem;border-radius:8px;opacity:.85}
+.nav a:hover,.nav a.on{opacity:1;background:color-mix(in srgb,var(--hero-fg) 10%,transparent)}
+.nav .btn{margin-left:.5rem;padding:.55em 1em;opacity:1}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid color-mix(in srgb,var(--hero-fg) 30%,transparent);color:inherit;border-radius:8px;padding:.4rem .7rem;font:inherit;cursor:pointer}
+@media (max-width:1020px){
+  .menu-btn{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;background:var(--hero-bg);padding:.5rem max(16px,env(safe-area-inset-right,0px)) 1rem max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid color-mix(in srgb,var(--hero-fg) 12%,transparent)}
+  .nav.open{display:flex}
+  .nav .btn{margin:.5rem 0 0;justify-content:center}
+}
+
+/* hero */
+.hero{position:relative;background:var(--hero-bg);color:var(--hero-fg);overflow:hidden}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 60%}
+.scene-tag{position:absolute;right:max(16px,env(safe-area-inset-right,0px));bottom:18px;z-index:2;margin:0;display:flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(6,22,24,.45);backdrop-filter:blur(6px);padding:.4rem .75rem;border-radius:999px;transition:opacity .4s}
+.vid-btn{all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.18);margin-left:.15rem}
+.vid-btn:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
+.vid-btn svg{width:10px;height:10px;fill:#fff}
+.vid-btn .i-play{display:none}
+.vid-btn.paused .i-play{display:inline}
+.vid-btn.paused .i-pause{display:none}
+.scene-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--sun)}
+@media (max-width:640px){.scene-tag{bottom:10px;font-size:.62rem}}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--hero-bg) 88%,transparent) 0%,color-mix(in srgb,var(--hero-bg) 62%,transparent) 45%,color-mix(in srgb,var(--hero-bg) 8%,transparent) 80%),linear-gradient(0deg,color-mix(in srgb,var(--hero-bg) 55%,transparent),transparent 40%)}
+@media (max-width:760px){.hero-shade{background:color-mix(in srgb,var(--hero-bg) 72%,transparent)}}
+.hero .wrap{position:relative;padding-block:clamp(56px,10vw,120px) clamp(48px,7vw,88px)}
+.hero .eyebrow{color:var(--sun)}
+.hero h1{font-size:var(--step-4);font-weight:800;max-width:14ch;margin:.6rem 0 1.2rem;letter-spacing:-.025em}
+.hero h1 em{font-style:normal;color:var(--sun)}
+.hero .lede{color:var(--hero-muted);max-width:56ch}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1.25rem 2.5rem;margin:2rem 0 2.25rem}
+.hero-meta div{display:flex;flex-direction:column}
+.hero-meta span{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--hero-muted)}
+.hero-meta strong{font-size:1.15rem;font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.countdown{margin-top:2.5rem;display:flex;gap:.75rem;flex-wrap:wrap;align-items:baseline;font-family:var(--font-mono);color:var(--hero-muted);font-size:.9rem}
+.countdown b{color:var(--hero-fg);font-size:1.6rem;font-weight:500}
+
+/* sections */
+section.block{padding-block:clamp(56px,8vw,96px);border-top:1px solid var(--line)}
+.head{display:grid;gap:.75rem;margin-bottom:2.5rem;max-width:760px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:2rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:start}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr}}
+.about-grid p+p{margin-top:1rem}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.facts div{background:var(--surface);padding:1.25rem}
+.facts b{display:block;font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--accent);line-height:1}
+.facts span{font-size:.92rem;color:var(--muted)}
+
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0;display:grid;gap:0;border-left:2px solid var(--line);margin-left:6px}
+.timeline li{position:relative;padding:.85rem 0 .85rem 1.6rem;display:grid;grid-template-columns:10.5rem 1fr auto;gap:1rem;align-items:baseline;border-bottom:1px dashed var(--line)}
+.timeline li::before{content:"";position:absolute;left:-8px;top:1.25rem;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.timeline li.past{color:var(--muted)}
+.timeline li.past::before{background:var(--line);border-color:var(--line)}
+.timeline li.next::before{background:var(--sun);border-color:var(--sun);box-shadow:0 0 0 5px color-mix(in srgb,var(--sun) 30%,transparent)}
+.timeline li.major .what{font-weight:700}
+.timeline time{font-family:var(--font-mono);font-size:.92rem}
+.pill{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:.2em .6em;border-radius:999px;white-space:nowrap}
+.pill.next{background:var(--sun);color:var(--sun-ink)}
+.pill.done{background:var(--soft);color:var(--muted)}
+@media (max-width:620px){.timeline li{grid-template-columns:1fr auto}.timeline li .what{grid-column:1/-1;grid-row:2}}
+
+/* registration */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-variant-numeric:tabular-nums}
+th,td{padding:1rem 1.1rem;text-align:left;border-bottom:1px solid var(--line)}
+thead th{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+td.num{font-family:var(--font-mono);font-size:1.05rem}
+tbody th{font-weight:700}
+tbody th small{display:block;font-weight:400;color:var(--muted);font-family:var(--font-mono);font-size:.8rem}
+tr.current{background:color-mix(in srgb,var(--sun) 14%,transparent)}
+tr.closed{color:var(--muted)}
+tr.closed td.num{text-decoration:line-through}
+.reg-notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem;margin-top:1.5rem}
+.reg-notes .card h3{font-size:1.05rem;margin-bottom:.4rem}
+.reg-notes .card p{color:var(--muted);font-size:.98rem}
+
+/* speakers */
+.speakers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:1.5rem}
+.speaker{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:start}
+.avatar{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:1.6rem;color:var(--accent-ink);background:var(--accent);flex-shrink:0;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.speaker .creds{font-family:var(--font-mono);font-size:.75rem;color:var(--muted);margin:.2rem 0 .8rem;line-height:1.5}
+.speaker blockquote{margin:0 0 .8rem;font-family:var(--font-display);font-size:1.12rem;font-weight:500;line-height:1.3}
+.speaker p{color:var(--muted);font-size:.98rem}
+.speaker .body{min-width:0}
+@media (max-width:480px){.speaker{grid-template-columns:1fr}}
+
+/* topics */
+.topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1.25rem}
+.topic h3{font-size:1.05rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.topic h3 svg{width:22px;height:22px;color:var(--accent);flex-shrink:0}
+.topic ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
+.topic li{font-size:.9rem;background:var(--soft);padding:.25em .7em;border-radius:6px}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1.25rem;counter-reset:s}
+.steps li{counter-increment:s;padding-top:1rem;border-top:3px solid var(--accent)}
+.steps li::before{content:"Step " counter(s);font-family:var(--font-mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.steps h3{font-size:1.1rem;margin:.35rem 0 .4rem}
+.steps p{color:var(--muted);font-size:.98rem}
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin:2.5rem 0 1.25rem}
+.tabs button{font:inherit;font-weight:600;padding:.5rem 1rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.panel ul{margin:0;padding-left:1.2rem;display:grid;gap:.5rem;max-width:72ch}
+.panel .grid-2{margin-top:1rem}
+.callout{border-left:4px solid var(--sun);background:var(--surface);padding:1rem 1.25rem;border-radius:0 10px 10px 0;margin-top:1.5rem;max-width:72ch}
+.downloads{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.dl{display:inline-flex;gap:.6rem;align-items:center;padding:.7rem 1rem;border:1px solid var(--line);border-radius:10px;background:var(--surface);text-decoration:none;color:var(--ink);font-weight:600}
+.dl span{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);font-weight:400}
+
+/* committee */
+.leads{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1rem;margin-bottom:2.5rem}
+.person{display:flex;gap:.9rem;align-items:center}
+.person .avatar{width:52px;height:52px;font-size:1.05rem}
+.person .role{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.person b{display:block;font-size:1.05rem}
+.person small{color:var(--muted);font-size:.9rem}
+.person > div{min-width:0}
+.tpc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));border-top:1px solid var(--line)}
+.tpc > div{padding:1rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:.2rem 1rem;padding-right:1.5rem}
+.tpc b{font-weight:700}
+.tpc .area{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);align-self:center;text-align:right}
+.tpc small{color:var(--muted);grid-column:1/-1;font-size:.9rem}
+.tpc a{font-size:.9rem;grid-column:1/-1;word-break:break-all}
+.ops{margin-top:2rem;color:var(--muted);font-size:.98rem}
+
+/* past */
+.past-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:1rem}
+.book{position:relative;padding:1.25rem 1.25rem 1.25rem 1.5rem;border-radius:4px 12px 12px 4px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:.35rem;min-height:190px}
+.book::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--accent);border-radius:4px 0 0 4px}
+.book .yr{font-family:var(--font-mono);font-size:.8rem;color:var(--muted)}
+.book h3{font-size:1.15rem}
+.book p{font-size:.92rem;color:var(--muted)}
+.book a{margin-top:auto;font-weight:600;font-size:.95rem}
+.book.latest::before{background:var(--sun)}
+
+/* travel */
+.travel{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1.25rem}
+.travel h3{margin-bottom:.6rem}
+.travel ul{margin:0;padding-left:1.1rem;display:grid;gap:.35rem}
+.travel p{color:var(--muted)}
+.travel p + p{margin-top:.6rem}
+.venue{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;background:var(--ink);color:var(--bg);border-radius:16px;padding:1.75rem;margin-bottom:1.5rem}
+.venue .eyebrow{color:var(--sun)}
+.venue h3{font-size:var(--step-2);margin:.3rem 0}
+.venue a.btn{background:var(--bg);color:var(--ink)}
+@media (max-width:640px){.venue{grid-template-columns:1fr}}
+
+/* sponsors */
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:1rem}
+.tier{border-top:6px solid var(--c)}
+.tier .price{font-family:var(--font-display);font-size:2.2rem;font-weight:800}
+.tier p{color:var(--muted)}
+.partners{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.partners a,.partners span{padding:.55rem .9rem;border:1px solid var(--line);border-radius:8px;font-weight:600;font-size:.92rem;text-decoration:none;color:var(--ink);background:var(--surface)}
+
+/* contact */
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem}
+.contacts .card{display:flex;flex-direction:column;gap:.35rem}
+.contacts .addr{font-family:var(--font-mono);font-size:.95rem;word-break:break-all}
+.copy{align-self:flex-start;margin-top:.5rem;font:inherit;font-size:.85rem;padding:.35rem .8rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+
+/* photos */
+.brand .mark{width:42px;height:42px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden;flex-shrink:0}
+.brand .mark img{width:38px;height:38px;object-fit:contain}
+.about-photo{border-radius:14px;overflow:hidden;margin-bottom:1rem;aspect-ratio:3/2;max-width:100%}
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:.75rem}
+.gallery figure{margin:0;position:relative;border-radius:12px;overflow:hidden;background:var(--soft)}
+.gallery figure.wide{grid-column:span 2}
+.gallery figure.tall{grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.5rem .9rem .7rem;font-size:.88rem;color:#fff;background:linear-gradient(transparent,rgba(5,20,22,.75))}
+@media (max-width:820px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+@media (prefers-reduced-motion:reduce){.gallery img{transition:none}}
+.tpc > div{grid-template-columns:auto 1fr;column-gap:1rem}
+.tpc{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+.tpc .area{grid-column:2;text-align:left;order:-1}
+.tpc .ph{grid-column:1;grid-row:1/span 4;width:52px;height:52px;border-radius:50%;object-fit:cover;background:var(--soft);display:grid;place-items:center;font-family:var(--font-display);font-weight:800;color:var(--accent)}
+.tpc b,.tpc small,.tpc a{grid-column:2}
+.book{flex-direction:row;gap:1rem;align-items:stretch}
+.book .cover{width:84px;flex-shrink:0;align-self:flex-start;border-radius:3px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.book .txt{display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.places{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:1.5rem}
+.place{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;max-width:100%;text-decoration:none;color:#fff;display:block}
+.place img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.place:hover img{transform:scale(1.05)}
+.place span{position:absolute;left:0;right:0;bottom:0;padding:1.5rem .8rem .6rem;font-weight:700;background:linear-gradient(transparent,rgba(5,20,22,.8))}
+@media (max-width:820px){.places{grid-template-columns:repeat(2,1fr)}}
+.logo-wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,168px),1fr));gap:.75rem;margin-top:2rem}
+.logo-wall a,.logo-wall span{background:#fff;border:1px solid var(--line);border-radius:10px;height:112px;display:grid;place-items:center;padding:1rem}
+.logo-wall img{max-width:100%;object-fit:contain}
+.foot-logo{width:84px;height:84px;border-radius:50%;background:#fff;display:grid;place-items:center;margin-bottom:.8rem}
+.foot-logo img{width:76px}
+/* phone layout */
+.mobile-cta{display:none}
+@media (max-width:640px){
+  section.block{padding-block:48px}
+  .head{margin-bottom:1.75rem}
+  h2{font-size:1.9rem}
+  .hero .wrap{padding-block:40px 36px}
+  .hero-meta{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.25rem;margin:1.5rem 0}
+  .hero-meta div:first-child{grid-column:1/-1}
+  .hero-cta .btn{flex:1 1 auto;justify-content:center}
+  .nav a{padding:.85rem .6rem;font-size:1.05rem;border-bottom:1px solid color-mix(in srgb,var(--hero-fg) 8%,transparent);border-radius:0}
+  .leads{gap:.6rem}
+  .leads .card{padding:1rem}
+  .past-list,.places{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.75rem;padding-bottom:.75rem;margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)));padding-right:max(16px,env(safe-area-inset-right,0px));-webkit-overflow-scrolling:touch}
+  .past-list > li{flex:0 0 82%;scroll-snap-align:start}
+  .places > a{flex:0 0 70%;scroll-snap-align:start}
+  .swipe-hint{display:block!important;font-family:var(--font-mono);font-size:.75rem;color:var(--muted);margin:-.75rem 0 1rem}
+  .mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;gap:.6rem;padding:.6rem max(16px,env(safe-area-inset-right,0px)) calc(.6rem + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:color-mix(in srgb,var(--hero-bg) 94%,transparent);backdrop-filter:blur(10px);border-top:1px solid color-mix(in srgb,var(--hero-fg) 12%,transparent);transform:translateY(110%);transition:transform .25s ease}
+  .mobile-cta.show{transform:none}
+  .mobile-cta .btn{flex:1;justify-content:center;padding:.75em 1em}
+  .mobile-cta .btn-ghost{color:var(--hero-fg)}
+  footer{padding-bottom:calc(3rem + 72px)}
+}
+.swipe-hint{display:none}
+@media (prefers-reduced-motion:reduce){.mobile-cta{transition:none}}
+/* submission form */
+.form-band{background:var(--soft)}
+.form-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:3rem;align-items:start}
+@media (max-width:900px){.form-layout{grid-template-columns:1fr;gap:1.5rem}}
+.form-intro h2{margin:.6rem 0 1rem}
+.form-notes{margin:1.5rem 0 0;padding-left:1.1rem;display:grid;gap:.5rem;color:var(--muted)}
+.sub-form{padding:clamp(1.25rem,3vw,2rem);display:grid;gap:1.25rem}
+.sub-form fieldset{border:0;margin:0;padding:0;min-width:0}
+.sub-form legend,.f label{font-weight:700;font-size:.95rem;margin-bottom:.4rem;display:block}
+.choice-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+@media (max-width:480px){.choice-row{grid-template-columns:1fr}}
+.choice{position:relative;display:flex;gap:.6rem;align-items:flex-start;border:1.5px solid var(--line);border-radius:10px;padding:.75rem .85rem;cursor:pointer;background:var(--bg)}
+.choice input{margin-top:.25rem;accent-color:var(--accent)}
+.choice b{display:block;font-size:.98rem}
+.choice small{color:var(--muted);font-size:.85rem}
+.choice:has(input:checked){border-color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,var(--surface))}
+.f-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 1.1rem}
+.f{min-width:0;display:flex;flex-direction:column}
+.f.full{grid-column:1/-1}
+@media (max-width:560px){.f-grid{grid-template-columns:1fr}}
+.f input:not([type=checkbox]):not([type=file]),.f select,.f textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:8px;padding:.65rem .75rem;width:100%}
+.f textarea{resize:vertical;line-height:1.5}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
+.f .bad{border-color:#C2410C!important}
+.opt{font-weight:400;color:var(--muted);font-size:.85rem;margin-left:.3rem}
+.hint{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);margin-top:.35rem;align-self:flex-end}
+.hint.over{color:#C2410C}
+.drop{display:block;border:1.5px dashed var(--line);border-radius:10px;padding:1.1rem;text-align:center;cursor:pointer;background:var(--bg);font-weight:400!important;color:var(--muted)}
+.drop b{color:var(--accent)}
+.drop.drag,.drop:focus-within{border-color:var(--accent)}
+.drop input{position:absolute;width:1px;height:1px;opacity:0}
+.check{flex-direction:row;gap:.6rem;align-items:flex-start}
+.check input{margin-top:.3rem;accent-color:var(--accent);flex-shrink:0;width:18px;height:18px}
+.check label{font-weight:400;font-size:.95rem;margin:0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.f-error{color:#C2410C;font-weight:600;margin:0}
+.submit-btn{justify-self:start;font-size:1.05rem;padding:.85em 2em;border:0;cursor:pointer}
+.submit-btn[disabled]{opacity:.6;cursor:progress}
+.f-done{text-align:center;padding:1.5rem 0;display:grid;gap:.75rem;justify-items:center}
+.f-done h3{font-size:var(--step-2)}
+.f-done p{color:var(--muted);max-width:46ch}
+footer{background:var(--hero-bg);color:var(--hero-muted);padding-block:3rem;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1.5rem 3rem;justify-content:space-between}
+footer a{color:var(--hero-fg)}
+footer b{color:var(--hero-fg)}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="CEA 2027 home">
+      <span class="mark"><img src="assets/logos/cea-mark.png" alt=""></span>
+      <span>CEA 2027<small>CLEANER EARTH &amp; ATMOSPHERE</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#dates">Dates</a>
+      <a href="#registration">Registration</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#submit">Submit</a>
+      <a href="#committee">Committee</a>
+      <a href="#past">Past editions</a>
+      <a href="#travel">Travel</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-sun" href="https://www.uwindsor.ca/engineering/research/495/turbulence-and-energy-lab-annual-conference" target="_blank" rel="noopener">Register</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture preload="auto" poster="media/poster.jpg" aria-hidden="true"><source src="media/hero.mp4" type="video/mp4"></video>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="scene-tag" id="sceneTag"><span class="dot" aria-hidden="true"></span><span id="sceneName" aria-hidden="true">Renewable energy</span><button type="button" class="vid-btn" id="vidBtn" aria-label="Pause background video"><svg viewBox="0 0 16 16" aria-hidden="true"><rect class="i-pause" x="3" y="2" width="3.5" height="12" rx="1"/><rect class="i-pause" x="9.5" y="2" width="3.5" height="12" rx="1"/><path class="i-play" d="M4 2.5v11l9.5-5.5z"/></svg></button></div>
+  <div class="wrap">
+    <p class="eyebrow">10th Annual Conference · Unlocking the path to a cleaner tomorrow</p>
+    <h1 id="hero-title">Cleaner Earth &amp; <em>Atmosphere</em> 2027</h1>
+    <p class="lede">Two days of new, often unpublished research on energy, climate and the environment, with engineers, scientists and industry partners in one room. Selected papers are published by Springer.</p>
+    <div class="hero-meta">
+      <div><span>When</span><strong>June 17–18, 2027</strong></div>
+      <div><span>Where</span><strong>University of Windsor, Ontario</strong></div>
+      <div><span>Abstracts due</span><strong>March 1, 2027</strong></div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-sun" href="https://www.uwindsor.ca/engineering/research/495/turbulence-and-energy-lab-annual-conference" target="_blank" rel="noopener">Register now</a>
+      <a class="btn btn-ghost" href="#submit-form">Submit an abstract</a>
+    </div>
+    <p class="countdown" id="countdown" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="block" id="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <p class="eyebrow">About the conference</p>
+      <h2 id="about-h" style="margin:.6rem 0 1.25rem">Early results, open discussion, real connections</h2>
+      <p class="lede">CEA is a meeting place for preliminary findings. Much of the work presented has not been published yet, so you hear about it first and can shape it while it is still in progress.</p>
+      <p style="margin-top:1rem">The conference is organized by the Turbulence and Energy Laboratory (TEL) at the University of Windsor, together with partners at the University of South Florida and other institutions. Each year brings researchers, students and industry together to share ideas on energy, the atmosphere, water and the environment.</p>
+      <p>Students compete for several presentation and poster awards. Judges and attendees both give feedback, and everyone at the event can rate talks through a link shared on the day.</p>
+    </div>
+    <div>
+      <div class="about-photo"><img src="assets/photos/group-forest.jpg" alt="Conference attendees gathered for a group photo among the trees" loading="lazy"></div>
+      <div class="facts" aria-label="Conference at a glance">
+      <div><b>10th</b><span>annual conference, since 2018</span></div>
+      <div><b>2 days</b><span>of oral sessions and posters</span></div>
+      <div><b>9</b><span>Springer proceedings volumes</span></div>
+      <div><b>5</b><span>research themes</span></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="gallery" aria-labelledby="gal-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Moments</p>
+      <h2 id="gal-h">Scenes from past conferences</h2>
+    </div>
+    <div class="gallery">
+      <figure class="wide tall"><img src="assets/photos/keynote.jpg" alt="Dr. Rupp Carriveau on stage with keynote speaker Dr. Graham Reader" loading="lazy" style="object-position:35% 55%"><figcaption>Dr. Rupp Carriveau with keynote speaker Dr. Graham Reader</figcaption></figure>
+      <figure class="wide"><img src="assets/photos/lecture-hall.jpg" alt="A full lecture hall of attendees watching a technical session" loading="lazy"><figcaption>Technical sessions</figcaption></figure>
+      <figure class="wide"><img style="object-position:50% 20%" src="assets/photos/awards.jpg" alt="Student award winners holding their certificates with organizers" loading="lazy"><figcaption>Student presentation awards</figcaption></figure>
+      <figure class="wide"><img src="assets/photos/banquet.jpg" alt="Guests at the conference banquet in a bright hall" loading="lazy"><figcaption>Banquet at Sprucewood Shores</figcaption></figure>
+      <figure><img src="assets/photos/posters.jpg" alt="Attendees discussing research posters" loading="lazy"><figcaption>Poster session</figcaption></figure>
+      <figure><img src="assets/photos/lunch.jpg" alt="Attendees talking over lunch" loading="lazy"><figcaption>Lunch and networking</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="dates" aria-labelledby="dates-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Important dates</p>
+      <h2 id="dates-h">The road to June 2027</h2>
+      <p class="lede">All deadlines are end of day, Eastern Time. The next deadline is highlighted.</p>
+    </div>
+    <ol class="timeline" id="timeline"></ol>
+  </div>
+</section>
+
+<section class="block" id="registration" aria-labelledby="reg-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Registration</p>
+      <h2 id="reg-h">Register early and save</h2>
+      <p class="lede">Fees are in Canadian dollars. The rate you pay depends on when you register. The current rate is highlighted.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Rate</th><th scope="col">Standard</th><th scope="col">Student</th><th scope="col">Companion</th></tr></thead>
+        <tbody id="fees"></tbody>
+      </table>
+    </div>
+    <div class="reg-notes">
+      <div class="card"><h3>Every registration includes</h3><p>Breakfasts, coffee breaks and lunches on both days.</p></div>
+      <div class="card"><h3>Conference banquet</h3><p>Included with Early Bird, Regular and Late rates, with a bus to and from Sprucewood Shores Estate Winery, 7258 Essex County Rd 50, Amherstburg, ON.</p></div>
+      <div class="card"><h3>Companion package</h3><p>Adds an extra banquet ticket for a guest. Not available at the Last Minute rate.</p></div>
+    </div>
+    <p style="margin-top:1.75rem"><a class="btn btn-accent" href="https://www.uwindsor.ca/engineering/research/495/turbulence-and-energy-lab-annual-conference" target="_blank" rel="noopener">Go to the registration form</a></p>
+  </div>
+</section>
+
+<section class="block" id="speakers" aria-labelledby="sp-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Keynote speakers</p>
+      <h2 id="sp-h">2027 keynotes</h2>
+    </div>
+    <div class="speakers">
+      <article class="card speaker">
+        <div class="avatar"><img src="assets/people/reader.jpg" alt="Dr. Graham Reader" loading="lazy"></div>
+        <div class="body">
+          <h3>Dr. Graham Reader</h3>
+          <p class="creds">University of Windsor · BA, BTech (Hons), PhD, psc, FEC, PEng, CEng, CMarE, Eur Ing, FIMarEst</p>
+          <blockquote>Engineers and Engineering Contributions to a “Promising Future”</blockquote>
+          <p>International declarations on sustainability and resilience are full of ambition, but often light on what can actually be built. This talk asks how engineers can turn that rhetoric into practical, feasible action.</p>
+        </div>
+      </article>
+      <article class="card speaker">
+        <div class="avatar"><img src="assets/people/hassellov.jpg" alt="Dr. Ida-Maja Hassellöv" loading="lazy"></div>
+        <div class="body">
+          <h3>Dr. Ida-Maja Hassellöv</h3>
+          <p class="creds">Marine chemist · Coordinating author, shipping chapter, third UN World Ocean Assessment</p>
+          <blockquote>Wake up! A call for holistic environmental assessment of shipping</blockquote>
+          <p>Shipping produces about 3% of human CO₂ emissions, but its other pressures, such as copper from antifouling paint and scrubber discharge, get far less attention. Dr. Hassellöv makes the case for assessing whole ships and whole sea areas together.</p>
+        </div>
+      </article>
+    </div>
+    <div class="callout"><b>The full program will be posted here in spring 2027.</b></div>
+  </div>
+</section>
+
+<section class="block" id="topics" aria-labelledby="tp-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Topics</p>
+      <h2 id="tp-h">What we want to hear about</h2>
+      <p class="lede">Submissions are welcome across five themes. If your work sits between them, that is a good sign.</p>
+    </div>
+    <div class="topics">
+      <div class="card topic"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>Renewable energy</h3>
+        <ul><li>Photovoltaic technology conversion</li><li>Solar thermal applications</li><li>Solar and low-energy architecture</li><li>Wind energy resources and technology</li><li>Geothermal technology</li><li>Wave, tide and ocean thermal energy</li><li>Hydro power</li><li>Biomass</li></ul></div>
+      <div class="card topic"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M10 2h4M10 10h4M10 14h4"/></svg>Clean energy systems</h3>
+        <ul><li>Hydrogen production and fuel cells</li><li>Energy storage</li><li>Carbon-neutrality technology</li><li>Desalination</li></ul></div>
+      <div class="card topic"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8c3-3 6 3 9 0s6 3 9 0M3 14c3-3 6 3 9 0s6 3 9 0M3 20c3-3 6 3 9 0s6 3 9 0"/></svg>Atmosphere and water</h3>
+        <ul><li>Climatology and meteorology</li><li>Aquatic and atmospheric environment</li></ul></div>
+      <div class="card topic"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/></svg>Environmental science and health</h3>
+        <ul><li>Biomonitoring and biomarkers</li><li>Emerging contaminants</li><li>Environmental biology</li><li>Environmental chemistry</li><li>Microbiology</li><li>Nanotechnology</li><li>Health and toxicology</li><li>Remediation and management</li><li>Catalysis and nanomaterials</li></ul></div>
+      <div class="card topic"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 5.5 2 5.5 5"/></svg>Society and policy</h3>
+        <ul><li>Socio-economic issues</li><li>Energy and climate policy</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="submit" aria-labelledby="sub-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Guidelines</p>
+      <h2 id="sub-h">How to submit</h2>
+      <p class="lede">Submit online in a few minutes. All papers go through blind review.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Prepare your file</h3><p>Use the 2027 paper template for full papers. Abstracts can be pasted straight into the form.</p></li>
+      <li><h3>Submit online</h3><p>Fill in the <a href="#submit-form">submission form</a> below and attach your file. It goes straight to the program committee.</p></li>
+      <li><h3>Get a confirmation</h3><p>You’ll receive a confirmation email right away. If it doesn’t arrive, check your spam folder or write to <span class="mono">TELab@uwindsor.ca</span>.</p></li>
+      <li><h3>Present in June</h3><p>Accepted work is presented orally or as a poster. Selected full papers go to the Springer proceedings.</p></li>
+    </ol>
+    <div class="downloads">
+      <a class="dl" href="assets/docs/CEA-paper-template-2027.doc" target="_blank" rel="noopener">Paper template 2027 <span>DOC</span></a>
+      <a class="dl" href="assets/docs/CEA-manuscript-review-form.docx" target="_blank" rel="noopener">Manuscript review form <span>DOCX</span></a>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Guidelines by role">
+      <button role="tab" id="t-auth" aria-selected="true" aria-controls="p-auth">For authors</button>
+      <button role="tab" id="t-rev" aria-selected="false" aria-controls="p-rev">For reviewers</button>
+      <button role="tab" id="t-chair" aria-selected="false" aria-controls="p-chair">For session chairs</button>
+    </div>
+    <div class="panel" id="p-auth" role="tabpanel" aria-labelledby="t-auth">
+      <div class="grid-2">
+        <div><h3 style="margin-bottom:.6rem">Abstract only or full paper</h3>
+          <ul><li><b>Abstract only:</b> you present orally, but the work is not included in the proceedings, books or special issues.</li><li><b>Full paper:</b> reviewed for inclusion in the Springer proceedings.</li><li>Meet each deadline in the <a href="#dates">important dates</a>.</li></ul></div>
+        <div><h3 style="margin-bottom:.6rem">Student poster session</h3>
+          <ul><li>Open to teams with at least one student author.</li><li>Choose “Student poster” as the submission type in the form.</li><li>A work can be a poster or a talk. If you do both, the content must be different.</li></ul></div>
+      </div>
+    </div>
+    <div class="panel" id="p-rev" role="tabpanel" aria-labelledby="t-rev" hidden>
+      <p style="margin-bottom:1rem;max-width:72ch">Please use the manuscript review form above. A paper should be accepted when it meets these standards:</p>
+      <ul><li>It follows the conference template.</li><li>The topic is of interest to attendees.</li><li>It makes a clear and significant contribution.</li><li>It is written in clear English.</li><li>It presents new or novel methods or applications, or new or significantly improved processes, designs, technologies, policies or procedures.</li></ul>
+    </div>
+    <div class="panel" id="p-chair" role="tabpanel" aria-labelledby="t-chair" hidden>
+      <ul><li>Arrive early and meet each presenter before your session.</li><li>Collect presentation slides before the break.</li><li>Introduce yourself and each speaker.</li><li>Keep every talk on time.</li><li>Moderate questions and answers.</li><li>Close by thanking the speakers and announcing the next session.</li></ul>
+    </div>
+    <div class="callout"><b>Want to organize a session?</b> Send your session proposal to <span class="mono">TELab@uwindsor.ca</span>.</div>
+  </div>
+</section>
+
+<section class="block form-band" id="submit-form" aria-labelledby="form-h">
+  <div class="wrap form-layout">
+    <div class="form-intro">
+      <p class="eyebrow">Submission form</p>
+      <h2 id="form-h">Submit your work</h2>
+      <p class="lede">Abstracts are due <b>March 1, 2027</b>. Draft papers and extended abstracts are due <b>March 30, 2027</b>.</p>
+      <ul class="form-notes">
+        <li>Your submission goes to the conference office and both chairs at once.</li>
+        <li>You’ll get a confirmation email with a copy of what you sent.</li>
+        <li>Files: PDF, DOC or DOCX, up to 10 MB.</li>
+        <li>Questions? <span class="mono">TELab@uwindsor.ca</span></li>
+      </ul>
+    </div>
+    <form class="card sub-form" id="subForm" novalidate>
+      <fieldset>
+        <legend>Submission type</legend>
+        <div class="choice-row" role="radiogroup">
+          <label class="choice"><input type="radio" name="type" id="type-abstract" value="Abstract only" checked><span><b>Abstract only</b><small>Oral presentation, not in proceedings</small></span></label>
+          <label class="choice"><input type="radio" name="type" id="type-paper" value="Full paper"><span><b>Full paper</b><small>Reviewed for Springer proceedings</small></span></label>
+          <label class="choice"><input type="radio" name="type" id="type-revised" value="Revised manuscript"><span><b>Revised manuscript</b><small>After reviewer comments</small></span></label>
+          <label class="choice"><input type="radio" name="type" id="type-poster" value="Student poster"><span><b>Student poster</b><small>Teams with a student author</small></span></label>
+        </div>
+      </fieldset>
+      <div class="f-grid">
+        <div class="f full"><label for="f-title">Title</label><input id="f-title" name="title" required maxlength="250" autocomplete="off"></div>
+        <div class="f"><label for="f-name">Presenting author</label><input id="f-name" name="name" required autocomplete="name"></div>
+        <div class="f"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="f"><label for="f-aff">Affiliation</label><input id="f-aff" name="affiliation" required autocomplete="organization"></div>
+        <div class="f"><label for="f-theme">Theme</label>
+          <select id="f-theme" name="theme" required>
+            <option value="">Choose a theme</option>
+            <option>Renewable energy</option><option>Clean energy systems</option><option>Atmosphere and water</option><option>Environmental science and health</option><option>Society and policy</option><option>Other</option>
+          </select></div>
+        <div class="f full"><label for="f-coauthors">Co-authors <span class="opt">optional</span></label><input id="f-coauthors" name="coauthors" placeholder="Name (Affiliation), Name (Affiliation)"></div>
+        <div class="f full" id="ms-wrap"><label for="f-ms">Manuscript ID <span class="opt">for revised manuscripts</span></label><input id="f-ms" name="manuscriptId" placeholder="From your decision email"></div>
+        <div class="f full"><label for="f-abstract">Abstract</label><textarea id="f-abstract" name="abstract" rows="7" required></textarea><span class="hint" id="wc">0 / 300 words</span></div>
+        <div class="f full"><label for="f-file">File <span class="opt" id="file-opt">optional for abstracts</span></label>
+          <label class="drop" id="drop"><input id="f-file" name="file" type="file" accept=".pdf,.doc,.docx"><span id="drop-text"><b>Choose a file</b> or drag it here</span></label></div>
+        <div class="f full check"><input type="checkbox" id="f-student" name="student" value="yes"><label for="f-student">The presenting author is a student, and I’d like to be considered for a student award.</label></div>
+        <div class="f full check"><input type="checkbox" id="f-agree" name="agree" required><label for="f-agree">I confirm that all authors have approved this submission, and that the presenting author will attend the conference.</label></div>
+        <div class="hp" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></div>
+      </div>
+      <p class="f-error" id="f-error" role="alert" hidden></p>
+      <button class="btn btn-sun submit-btn" type="submit" id="f-submit">Submit</button>
+      <div class="f-done" id="f-done" hidden>
+        <h3>Thank you, your submission is in</h3>
+        <p id="f-done-text">We’ve sent a confirmation to your email. The program committee will be in touch after review.</p>
+        <button class="btn btn-ghost" type="button" id="f-again">Submit another</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="block" id="committee" aria-labelledby="com-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">The organizers</p>
+      <h2 id="com-h">Conference leadership</h2>
+    </div>
+    <div class="leads">
+      <div class="card person"><div class="avatar"><img src="assets/people/carriveau.jpg" alt="" loading="lazy"></div><div><span class="role">Honorary Chair</span><b><a href="https://www.uwindsor.ca/engineering/civil/115/dr-rupp-carriveau" target="_blank" rel="noopener">Dr. Rupp Carriveau</a></b><small>University of Windsor</small></div></div>
+      <div class="card person"><div class="avatar"><img src="assets/people/ting.jpg" alt="" loading="lazy"></div><div><span class="role">Conference Chair</span><b><a href="https://www.uwindsor.ca/engineering/mame/329/dr-d-ting" target="_blank" rel="noopener">Dr. David Ting</a></b><small>University of Windsor</small></div></div>
+      <div class="card person"><div class="avatar"><img src="assets/people/vaselbehagh.jpg" alt="" loading="lazy"></div><div><span class="role">Technical Program Chair</span><b><a href="https://www.tdlab.info/" target="_blank" rel="noopener">Dr. Ahmad Vaselbehagh</a></b><small>University of South Florida</small></div></div>
+      <div class="card person"><div class="avatar"><img src="assets/people/stagner.jpg" alt="" loading="lazy"></div><div><span class="role">Logistics Chair</span><b><a href="https://www.uwindsor.ca/engineering/mame/425/dr-jacqueline-stagner" target="_blank" rel="noopener">Dr. Jacqueline Stagner</a></b><small>University of Windsor</small></div></div>
+      <div class="card person"><div class="avatar" aria-hidden="true">MH</div><div><span class="role">Logistics Chair</span><b>Marissa Hatt</b><small>Turbulence and Energy Laboratory</small></div></div>
+    </div>
+    <h3 style="margin-bottom:1rem">Technical program committee</h3>
+    <div class="tpc">
+      <div><img class="ph" src="assets/people/lubitz.jpg" alt="" loading="lazy"><b>Dr. David Lubitz</b><span class="area">Atmosphere</span><small>University of Guelph</small><a href="mailto:wlubitz@uoguelph.ca">wlubitz@uoguelph.ca</a></div>
+      <div><img class="ph" src="assets/people/obrien.jpg" alt="" loading="lazy"><b>Dr. Paul G. O’Brien</b><span class="area">Engineering</span><small>York University</small><a href="mailto:paul.obrien@lassonde.yorku.ca">paul.obrien@lassonde.yorku.ca</a></div>
+      <div><img class="ph" src="assets/people/oyeyi.jpg" alt="" loading="lazy"><b>Dr. Abimbola Grace Oyeyi</b><span class="area">Sustainable transportation</span><small>University of Windsor</small><a href="mailto:goyeyi@uwindsor.ca">goyeyi@uwindsor.ca</a></div>
+      <div><img class="ph" src="assets/people/stagner.jpg" alt="" loading="lazy"><b>Dr. Jacqueline Stagner</b><span class="area">Education</span><small>University of Windsor</small><a href="mailto:stagner@uwindsor.ca">stagner@uwindsor.ca</a></div>
+      <div><img class="ph" src="assets/people/tyagi.jpg" alt="" loading="lazy"><b>Dr. Himanshu Tyagi</b><span class="area">Energy</span><small>Indian Institute of Technology Ropar</small><a href="mailto:himanshu.tyagi@iitrpr.ac.in">himanshu.tyagi@iitrpr.ac.in</a></div>
+      <div><img class="ph" src="assets/people/reader.jpg" alt="" loading="lazy"><b>Dr. Graham Reader</b><span class="area">Water</span><small>University of Windsor</small><a href="mailto:greader@uwindsor.ca">greader@uwindsor.ca</a></div>
+      <div><img class="ph" src="assets/people/digweed.jpg" alt="" loading="lazy"><b>Quade Digweed</b><span class="area">Agriculture</span><small>Agriculture and Agri-Food Canada</small><a href="mailto:quade.digweed@agr.gc.ca">quade.digweed@agr.gc.ca</a></div>
+      <div><img class="ph" src="assets/people/ruparathna.jpg" alt="" loading="lazy"><b>Dr. Rajeev Ruparathna</b><span class="area">Sustainability</span><small>University of Windsor</small><a href="mailto:rajeev.ruparathna@uwindsor.ca">rajeev.ruparathna@uwindsor.ca</a></div>
+    </div>
+    <p class="ops"><b>Operations team:</b> Anthony Fuerth (conference overseer), Lisa Geloso (sponsorship), Mark Gryn (media and IT).</p>
+  </div>
+</section>
+
+<section class="block" id="past" aria-labelledby="past-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Past editions</p>
+      <h2 id="past-h">Nine conferences, nine books</h2>
+      <p class="lede">Each edition has its own theme. Selected papers are collected in a Springer proceedings volume.</p>
+    </div>
+    <p class="swipe-hint">Swipe to see all editions →</p>
+    <ul class="past-list" id="pastList"></ul>
+  </div>
+</section>
+
+<section class="block" id="travel" aria-labelledby="tr-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Venue and travel</p>
+      <h2 id="tr-h">Getting to Windsor</h2>
+      <p class="lede">Windsor sits on the Detroit River, directly across from Detroit, Michigan. It is easy to reach from both Canada and the United States.</p>
+    </div>
+    <div class="venue">
+      <div>
+        <p class="eyebrow">Venue</p>
+        <h3>Ed Lumley Centre for Engineering Innovation</h3>
+        <p>University of Windsor · 401 Sunset Avenue, Windsor, ON N9B 3P4, Canada. All sessions are on the first floor.</p>
+      </div>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Ed+Lumley+Centre+for+Engineering+Innovation+401+Sunset+Ave+Windsor+ON" target="_blank" rel="noopener">Open in Maps</a>
+    </div>
+    <div class="travel">
+      <div class="card"><h3>Where to stay</h3>
+        <ul>
+          <li><a href="https://www.caesars.com/caesars-windsor" target="_blank" rel="noopener">Caesars Windsor Hotel and Casino</a></li>
+          <li><a href="https://www.hilton.com/en/hotels/yqgwidt-doubletree-windsor-hotel-and-suites/" target="_blank" rel="noopener">DoubleTree by Hilton Windsor</a></li>
+          <li><a href="https://www.marriott.com/en-us/hotels/yqgfp-four-points-windsor-downtown/overview/" target="_blank" rel="noopener">Four Points by Sheraton Windsor Downtown</a></li>
+          <li><a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/windsor/yqgrs/hoteldetail" target="_blank" rel="noopener">Holiday Inn Express Windsor Waterfront</a></li>
+        </ul>
+        <p style="margin-top:.75rem">There is no hotel shuttle. Take a taxi, Uber or <a href="https://www.citywindsor.ca/residents/transit-windsor/Routes-and-Schedules" target="_blank" rel="noopener">Transit Windsor</a>.</p>
+      </div>
+      <div class="card"><h3>Parking</h3>
+        <p>Use the multi-level garage on California Avenue, across from the engineering building. Parking is a flat $10 per day.</p>
+        <p><a href="assets/docs/uwindsor-parking-map.pdf" target="_blank" rel="noopener">Campus map (PDF)</a> · <a href="https://www.uwindsor.ca/parking-services/" target="_blank" rel="noopener">Parking Services</a></p>
+      </div>
+      <div class="card"><h3>Visa letters</h3>
+        <p>If you need a visa to enter Canada, register first, then email your receipt to <span class="mono">TELab@uwindsor.ca</span> to request an official invitation letter.</p>
+        <p>Registration fees are non-refundable, and the conference cannot influence visa decisions. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa.html" target="_blank" rel="noopener">Apply for a visitor visa</a>.</p>
+      </div>
+    </div>
+    <h3 style="margin-top:2.5rem">While you’re here</h3>
+    <p class="swipe-hint" style="margin-top:1rem">Swipe for more →</p>
+    <div class="places">
+      <a class="place" href="https://www.citywindsor.ca/visitors" target="_blank" rel="noopener"><img src="assets/places/windsor.jpg" alt="" loading="lazy"><span>Downtown Windsor</span></a>
+      <a class="place" href="https://parks.canada.ca/pn-np/on/pelee/visit" target="_blank" rel="noopener"><img src="assets/places/point-pelee.jpg" alt="" loading="lazy"><span>Point Pelee National Park</span></a>
+      <a class="place" href="https://www.jpwisers.com/en-ca/tours/" target="_blank" rel="noopener"><img src="assets/places/jp-wisers.jpg" alt="" loading="lazy"><span>The J.P. Wiser’s Experience</span></a>
+      <a class="place" href="https://windsorpremiercruises.com/" target="_blank" rel="noopener"><img src="assets/places/river-cruise.jpg" alt="" loading="lazy"><span>Detroit River cruises</span></a>
+      <a class="place" href="https://www.amherstburg.ca/en/Index.aspx" target="_blank" rel="noopener"><img src="assets/places/amherstburg.jpg" alt="" loading="lazy"><span>Amherstburg waterfront</span></a>
+      <a class="place" href="https://visitdetroit.com/things-to-do/" target="_blank" rel="noopener"><img src="assets/places/detroit.jpg" alt="" loading="lazy"><span>Detroit, across the river</span></a>
+      <a class="place" href="https://www.thehenryford.org/" target="_blank" rel="noopener"><img src="assets/places/henry-ford.jpg" alt="" loading="lazy"><span>The Henry Ford Museum</span></a>
+      <a class="place" href="https://www.caesars.com/caesars-windsor/casino" target="_blank" rel="noopener"><img src="assets/places/caesars.jpg" alt="" loading="lazy"><span>Caesars Windsor</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sponsors" aria-labelledby="spo-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Sponsors and partners</p>
+      <h2 id="spo-h">Support the conference</h2>
+      <p class="lede">Every sponsorship includes an exhibition booth and complimentary registrations. To discuss options, email <span class="mono">TELab@uwindsor.ca</span> with the subject “CEA Conference Sponsorship”.</p>
+    </div>
+    <div class="tiers">
+      <div class="card tier" style="--c:#B0773F"><p class="eyebrow">Bronze</p><p class="price mono">$1,000</p><p>2 complimentary registrations and a booth</p></div>
+      <div class="card tier" style="--c:#9AA6AB"><p class="eyebrow">Silver</p><p class="price mono">$1,800</p><p>3 complimentary registrations and a booth</p></div>
+      <div class="card tier" style="--c:#D6A531"><p class="eyebrow">Gold</p><p class="price mono">$3,000</p><p>5 complimentary registrations and a booth</p></div>
+    </div>
+    <div class="logo-wall" aria-label="Partners">
+      <a href="https://www.uwindsor.ca/" target="_blank" rel="noopener" title="University of Windsor"><img src="assets/logos/uwindsor.png" style="width:6.97rem;height:auto" alt="University of Windsor" loading="lazy"></a>
+      <a href="https://www.usf.edu/" target="_blank" rel="noopener" title="University of South Florida"><img src="assets/logos/usf.png" style="width:4.24rem;height:auto" alt="University of South Florida" loading="lazy"></a>
+      <a href="http://www.turbulenceandenergylab.org/" target="_blank" rel="noopener" title="Turbulence and Energy Laboratory"><img src="assets/logos/tel.png" style="width:7.70rem;height:auto" alt="Turbulence and Energy Laboratory" loading="lazy"></a>
+      <a href="https://www.tdlab.info/" target="_blank" rel="noopener" title="Thermofluids Discovery Lab"><img src="assets/logos/tdl.png" style="width:4.02rem;height:auto" alt="Thermofluids Discovery Lab" loading="lazy"></a>
+      <a href="https://www.environmentalenergyinstitute.com/" target="_blank" rel="noopener" title="Environmental Energy Institute"><img src="assets/logos/eei.png" style="width:8.24rem;height:auto" alt="Environmental Energy Institute" loading="lazy"></a>
+      <a href="https://www.uoguelph.ca/" target="_blank" rel="noopener" title="University of Guelph"><img src="assets/logos/guelph.png" style="width:7.16rem;height:auto" alt="University of Guelph" loading="lazy"></a>
+      <a href="https://www.upei.ca/" target="_blank" rel="noopener" title="University of Prince Edward Island"><img src="assets/logos/upei.png" style="width:6.77rem;height:auto" alt="University of Prince Edward Island" loading="lazy"></a>
+      <span title="York University"><img src="assets/logos/york.png" style="width:7.57rem;height:auto" alt="York University" loading="lazy"></span>
+      <span title="IIT Ropar"><img src="assets/logos/iitropar.png" style="width:4.59rem;height:auto" alt="IIT Ropar" loading="lazy"></span>
+      <span title="Clean Diesel Engine Laboratory"><img src="assets/logos/cdl.png" style="width:4.36rem;height:auto" alt="Clean Diesel Engine Laboratory" loading="lazy"></span>
+      <span title="AllInterest Research Institute"><img src="assets/logos/airi.png" style="width:4.82rem;height:auto" alt="AllInterest Research Institute" loading="lazy"></span>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="contact" aria-labelledby="ct-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Contact</p>
+      <h2 id="ct-h">Get in touch</h2>
+      <p class="lede">For dietary needs, accessibility, or anything else, write to the conference office.</p>
+    </div>
+    <div class="contacts">
+      <div class="card"><span class="eyebrow">General inquiries</span><b>Conference office</b><span class="addr">TELab@uwindsor.ca</span><span class="mono" style="color:var(--muted);font-size:.9rem">519-253-3000 ext. 2599 · ext. 5948</span><button class="copy" data-copy="TELab@uwindsor.ca">Copy email</button></div>
+      <div class="card"><span class="eyebrow">Conference Chair</span><b>Dr. David Ting</b><span class="addr">dting@uwindsor.ca</span><button class="copy" data-copy="dting@uwindsor.ca">Copy email</button></div>
+      <div class="card"><span class="eyebrow">Technical Program Chair</span><b>Dr. Ahmad Vaselbehagh</b><span class="addr">vaselbehagh@usf.edu</span><button class="copy" data-copy="vaselbehagh@usf.edu">Copy email</button></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="mobile-cta" id="mobileCta" aria-label="Quick actions">
+  <a class="btn btn-ghost" href="#dates">Key dates</a>
+  <a class="btn btn-sun" href="https://www.uwindsor.ca/engineering/research/495/turbulence-and-energy-lab-annual-conference" target="_blank" rel="noopener">Register</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><div class="foot-logo"><img src="assets/logos/cea-mark.png" alt="CEA logo"></div><b>Cleaner Earth &amp; Atmosphere Conference</b><br>Turbulence and Energy Laboratory, University of Windsor<br>401 Sunset Avenue, Windsor, ON N9B 3P4, Canada</div>
+    <div><a href="mailto:TELab@uwindsor.ca">TELab@uwindsor.ca</a><br>519-253-3000 ext. 2599<br><a href="https://www.linkedin.com/in/david-ting-403156149/" target="_blank" rel="noopener">LinkedIn</a></div>
+    <div>© <span id="yr">2026</span> CEA Conference</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---- data ----
+  var DATES=[
+    ["2027-03-01","Abstracts due",1],
+    ["2027-03-08","Notification of abstract decisions"],
+    ["2027-03-30","Draft paper or extended abstract due",1],
+    ["2027-04-15","Reviews completed"],
+    ["2027-04-30","Presentation-only abstracts due"],
+    ["2027-04-30","Revised manuscripts due"],
+    ["2027-05-07","Final manuscript decisions"],
+    ["2027-06-17","Conference: oral presentations (June 17–18)",1],
+    ["2027-06-18","Selection for Springer proceedings"]
+  ];
+  var FEES=[ // [name, label, deadline (last day), std, stu, comp]
+    ["Early Bird","until March 11, 2027","2027-03-11",395,355,515],
+    ["Regular","until April 9, 2027","2027-04-09",420,380,550],
+    ["Late","until May 6, 2027","2027-05-06",450,410,590],
+    ["Last Minute","May 7 – June 18, 2027","2027-06-18",500,410,null]
+  ];
+  var PAST=[
+    [2018,"1st","The Energy Mix for Sustaining Our Future","The state of the art across energy and engineering systems.","https://link.springer.com/book/10.1007/978-3-030-00105-6"],
+    [2019,"2nd","Complementary Resources for Tomorrow","Wind, solar, hydro, geothermal and the environment.","https://link.springer.com/book/10.1007/978-3-030-38804-1"],
+    [2020,"3rd","Sustaining Tomorrow","Agriculture, engineering, energy, environment, economics and water.","https://link.springer.com/book/10.1007/978-3-030-64715-5"],
+    [2021,"4th","Mitigating Climate Change","Engineering and science responses to a changing climate.","https://link.springer.com/book/10.1007/978-3-030-92148-4"],
+    [2022,"5th","Responsible Engineering and Living","How engineering and everyday choices add up.","https://link.springer.com/book/10.1007/978-3-031-20506-4"],
+    [2023,"6th","Engineering to Adapt","Efficiency and adaptation in a changing world.","https://link.springer.com/book/10.1007/978-3-031-47237-4"],
+    [2024,"7th","Brightening Tomorrow Together","Collaboration across disciplines for a cleaner future.","https://link.springer.com/book/10.1007/978-3-031-73486-1"],
+    [2025,"8th","Eco-Friendly Engineering","Published as “Sustaining Tomorrow with Minimal Entropy Generation”.","https://link.springer.com/book/9783032133564"],
+    [2026,"9th","Holistic Engineering","Sustainability, decarbonization and whole-system thinking.",null]
+  ];
+  var EVENT=new Date("2027-06-17T09:00:00-04:00");
+
+  var now=new Date();
+  var today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  function d(s){var p=s.split("-");return new Date(+p[0],p[1]-1,+p[2]);}
+  function fmt(s){return d(s).toLocaleDateString("en-CA",{month:"long",day:"numeric",year:"numeric"});}
+
+  // timeline
+  var tl=document.getElementById("timeline"), nextFound=false, html="";
+  DATES.forEach(function(r){
+    var past=d(r[0])<today, cls=[], tag="";
+    if(past){cls.push("past");tag='<span class="pill done">Passed</span>';}
+    else if(!nextFound){nextFound=true;cls.push("next");tag='<span class="pill next">Next</span>';}
+    if(r[2])cls.push("major");
+    var label=r[0]==="2027-06-17"?"June 17–18, 2027":fmt(r[0]);
+    html+='<li class="'+cls.join(" ")+'"><time datetime="'+r[0]+'">'+label+'</time><span class="what">'+r[1]+'</span>'+tag+'</li>';
+  });
+  tl.innerHTML=html;
+
+  // fees
+  var cur=-1;
+  FEES.forEach(function(f,i){if(cur<0&&today<=d(f[2]))cur=i;});
+  var fb="";
+  function money(v){return v==null?'<span title="Not available">—</span>':"$"+v;}
+  FEES.forEach(function(f,i){
+    var c=i===cur?"current":(cur<0||i<cur?"closed":"");
+    fb+='<tr class="'+c+'"><th scope="row">'+f[0]+(i===cur?' <span class="pill next">Current</span>':'')+'<small>'+f[1]+'</small></th><td class="num">'+money(f[3])+'</td><td class="num">'+money(f[4])+'</td><td class="num">'+money(f[5])+'</td></tr>';
+  });
+  document.getElementById("fees").innerHTML=fb;
+
+  // past
+  var pl="";
+  PAST.slice().reverse().forEach(function(p,i){
+    pl+='<li class="book'+(i===0?" latest":"")+'"><img class="cover" src="assets/books/'+p[0]+'.jpg" alt="" loading="lazy"><div class="txt"><span class="yr">'+p[1]+' Annual · '+p[0]+'</span><h3>'+p[2]+'</h3><p>'+p[3]+'</p>'+(p[4]?'<a href="'+p[4]+'" target="_blank" rel="noopener">View the Springer volume</a>':'<span class="yr" style="margin-top:auto">In press with Springer</span>')+'</div></li>';
+  });
+  document.getElementById("pastList").innerHTML=pl;
+
+  // countdown
+  var cd=document.getElementById("countdown");
+  var days=Math.ceil((EVENT-now)/864e5);
+  if(days>0)cd.innerHTML='<b>'+days+'</b> days until the conference opens';
+  else if(days>-2)cd.innerHTML='<b>Happening now</b>';
+  document.getElementById("yr").textContent=now.getFullYear();
+
+  // menu
+  var mb=document.getElementById("menuBtn"),nav=document.getElementById("nav");
+  mb.addEventListener("click",function(){var o=nav.classList.toggle("open");mb.setAttribute("aria-expanded",o);});
+  nav.addEventListener("click",function(e){if(e.target.tagName==="A"){nav.classList.remove("open");mb.setAttribute("aria-expanded","false");}});
+
+  // active section in nav
+  var links=[].slice.call(nav.querySelectorAll('a[href^="#"]'));
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id);});}});},{rootMargin:"-40% 0px -55% 0px"});
+    links.forEach(function(a){var s=document.querySelector(a.getAttribute("href"));if(s)io.observe(s);});
+  }
+
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  tabs.forEach(function(t){t.addEventListener("click",function(){
+    tabs.forEach(function(x){var on=x===t;x.setAttribute("aria-selected",on);document.getElementById(x.getAttribute("aria-controls")).hidden=!on;});
+  });});
+
+  // copy
+  document.querySelectorAll(".copy").forEach(function(b){b.addEventListener("click",function(){
+    var v=b.getAttribute("data-copy"),orig=b.textContent;
+    function ok(){b.textContent="Copied";setTimeout(function(){b.textContent=orig;},1600);}
+    function fallback(){var s=b.parentNode.querySelector(".addr");var r=document.createRange();r.selectNodeContents(s);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);b.textContent="Selected, press Ctrl+C";}
+    try{navigator.clipboard.writeText(v).then(ok,fallback);}catch(e){fallback();}
+  });});
+
+  // phone quick-action bar appears after the hero
+  var mc=document.getElementById("mobileCta"),hero=document.querySelector(".hero");
+  if("IntersectionObserver" in window){new IntersectionObserver(function(es){mc.classList.toggle("show",!es[0].isIntersecting);}).observe(hero);}
+  // submission form
+  // After deploying the Google Apps Script (see tools/submission-form.gs), paste its web app URL here.
+  var FORM_ENDPOINT="";
+  var form=document.getElementById("subForm");
+  if(form){
+    var abs=document.getElementById("f-abstract"),wc=document.getElementById("wc"),fileIn=document.getElementById("f-file"),drop=document.getElementById("drop"),dropText=document.getElementById("drop-text"),err=document.getElementById("f-error"),btn=document.getElementById("f-submit"),done=document.getElementById("f-done"),msWrap=document.getElementById("ms-wrap"),fileOpt=document.getElementById("file-opt");
+    var MAXW=300,MAXB=10*1024*1024;
+    function words(){var n=(abs.value.trim().match(/\S+/g)||[]).length;wc.textContent=n+" / "+MAXW+" words";wc.classList.toggle("over",n>MAXW);return n;}
+    abs.addEventListener("input",words);
+    function type(){return form.querySelector('input[name="type"]:checked').value;}
+    function syncType(){var t=type();msWrap.hidden=t!=="Revised manuscript";fileOpt.textContent=(t==="Full paper"||t==="Revised manuscript")?"required: PDF, DOC or DOCX":"optional for abstracts and posters";}
+    form.querySelectorAll('input[name="type"]').forEach(function(r){r.addEventListener("change",syncType);});syncType();
+    function showFile(){var f=fileIn.files[0];dropText.innerHTML=f?"<b>"+f.name.replace(/[<>&]/g,"")+"</b> · "+(f.size/1048576).toFixed(1)+" MB":"<b>Choose a file</b> or drag it here";}
+    fileIn.addEventListener("change",showFile);
+    ["dragenter","dragover"].forEach(function(e){drop.addEventListener(e,function(ev){ev.preventDefault();drop.classList.add("drag");});});
+    ["dragleave","drop"].forEach(function(e){drop.addEventListener(e,function(ev){ev.preventDefault();drop.classList.remove("drag");});});
+    drop.addEventListener("drop",function(ev){if(ev.dataTransfer.files.length){fileIn.files=ev.dataTransfer.files;showFile();}});
+    function fail(msg,el){err.textContent=msg;err.hidden=false;if(el){el.classList.add("bad");el.focus();}}
+    form.addEventListener("input",function(e){if(e.target.classList)e.target.classList.remove("bad");err.hidden=true;});
+    function readFile(f){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(String(r.result).split(",")[1]);};r.onerror=rej;r.readAsDataURL(f);});}
+    form.addEventListener("submit",function(e){
+      e.preventDefault();err.hidden=true;
+      var req=[["f-title","Please add a title."],["f-name","Please add the presenting author’s name."],["f-email","Please add an email address."],["f-aff","Please add an affiliation."],["f-theme","Please choose a theme."],["f-abstract","Please paste your abstract."]];
+      for(var i=0;i<req.length;i++){var el=document.getElementById(req[i][0]);if(!el.value.trim())return fail(req[i][1],el);}
+      var em=document.getElementById("f-email");if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim()))return fail("That email address doesn’t look right. Please check it.",em);
+      if(words()>MAXW)return fail("Your abstract is over "+MAXW+" words. Please shorten it.",abs);
+      var t=type(),f=fileIn.files[0];
+      if((t==="Full paper"||t==="Revised manuscript")&&!f)return fail("Please attach your "+(t==="Full paper"?"paper":"revised manuscript")+".",drop);
+      if(f&&!/\.(pdf|docx?)$/i.test(f.name))return fail("Please attach a PDF, DOC or DOCX file.",drop);
+      if(f&&f.size>MAXB)return fail("That file is larger than 10 MB. Please compress it or email TELab@uwindsor.ca.",drop);
+      var ag=document.getElementById("f-agree");if(!ag.checked)return fail("Please confirm the statement at the bottom of the form.",ag);
+      if(document.getElementById("f-website").value)return; // bot
+      var data={type:t,title:val("f-title"),name:val("f-name"),email:val("f-email"),affiliation:val("f-aff"),theme:val("f-theme"),coauthors:val("f-coauthors"),manuscriptId:val("f-ms"),abstract:abs.value.trim(),student:document.getElementById("f-student").checked};
+      function val(id){return document.getElementById(id).value.trim();}
+      btn.disabled=true;btn.textContent="Sending…";
+      (f?readFile(f):Promise.resolve(null)).then(function(b64){
+        if(b64){data.fileName=f.name;data.fileType=f.type||"application/octet-stream";data.fileData=b64;}
+        if(!FORM_ENDPOINT){if(/github\.io$|caeconference\.ca$/.test(location.hostname))return {ok:false,error:"not configured"};return new Promise(function(r){setTimeout(function(){r({ok:true,preview:true});},700);});}
+        return fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(data)}).then(function(r){return r.json();});
+      }).then(function(res){
+        if(!res||!res.ok)throw new Error(res&&res.error||"failed");
+        [].forEach.call(form.children,function(c){if(c!==done)c.hidden=true;});
+        done.hidden=false;
+        document.getElementById("f-done-text").textContent=res.preview?"This is a preview, so nothing was sent. On the live site, the program committee receives your submission and you get a confirmation email.":"We’ve sent a confirmation to "+data.email+". The program committee will be in touch after review.";
+        done.scrollIntoView({block:"center"});
+      }).catch(function(){
+        fail("We couldn’t send your submission. Please try again in a minute. If it keeps failing, email it to TELab@uwindsor.ca.");
+      }).then(function(){btn.disabled=false;btn.textContent="Submit";});
+    });
+    document.getElementById("f-again").addEventListener("click",function(){form.reset();showFile();words();syncType();[].forEach.call(form.children,function(c){c.hidden=(c===done||c===err);});msWrap.hidden=type()!=="Revised manuscript";});
+  }
+  // hero video: respect reduced motion
+  var hv=document.getElementById("heroVideo");
+  var SCN=["Renewable energy","Clean energy systems","Atmosphere and water","Environmental science and health","Society and policy"],sn=document.getElementById("sceneName"),stag=document.getElementById("sceneTag"),cur=0;
+  hv.addEventListener("timeupdate",function(){var i=Math.min(4,Math.floor(((hv.currentTime+0.45)%20)/4));if(i!==cur){cur=i;stag.style.opacity=0;setTimeout(function(){sn.textContent=SCN[i];stag.style.opacity=1;},300);}});
+  var vb=document.getElementById("vidBtn");
+  hv.muted=true;hv.defaultMuted=true;hv.setAttribute("muted","");
+  function syncBtn(){var p=hv.paused;vb.classList.toggle("paused",p);vb.setAttribute("aria-label",p?"Play background video":"Pause background video");}
+  hv.addEventListener("play",syncBtn);hv.addEventListener("pause",syncBtn);
+  function tryPlay(){var pr;try{pr=hv.play();}catch(e){}if(pr&&pr.catch)pr.catch(function(){});}
+  vb.addEventListener("click",function(){userChose=true;if(hv.paused)tryPlay();else hv.pause();});
+  var userChose=false;
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches){hv.removeAttribute("autoplay");try{hv.pause();}catch(e){}}
+  else{
+    tryPlay();
+    // Some phones block autoplay (Low Power Mode, data saver): start on first touch or scroll instead.
+    var kick=function(){if(!userChose&&hv.paused)tryPlay();};
+    ["touchstart","scroll","click","keydown"].forEach(function(ev){window.addEventListener(ev,kick,{passive:true,once:true});});
+    document.addEventListener("visibilitychange",function(){if(!document.hidden&&!userChose&&hv.paused)tryPlay();});
+  }
+  syncBtn();
+})();
+</script>
+
+</body>
+</html>
