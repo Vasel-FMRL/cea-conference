@@ -865,7 +865,7 @@ footer b{color:var(--hero-fg)}
   if("IntersectionObserver" in window){new IntersectionObserver(function(es){mc.classList.toggle("show",!es[0].isIntersecting);}).observe(hero);}
   // submission form
   // After deploying the Google Apps Script (see tools/submission-form.gs), paste its web app URL here.
-  var FORM_ENDPOINT="";
+  var FORM_ENDPOINT="https://script.google.com/macros/s/AKfycbx3oWLoI1ekjqbyDW2Z5_jYsyaN7M49P420_fwQuihRYRB6lESfmAIvXI--TF8lp27F/exec";
   var form=document.getElementById("subForm");
   if(form){
     var abs=document.getElementById("f-abstract"),wc=document.getElementById("wc"),fileIn=document.getElementById("f-file"),drop=document.getElementById("drop"),dropText=document.getElementById("drop-text"),err=document.getElementById("f-error"),btn=document.getElementById("f-submit"),done=document.getElementById("f-done"),msWrap=document.getElementById("ms-wrap"),fileOpt=document.getElementById("file-opt");
