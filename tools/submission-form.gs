@@ -7,6 +7,8 @@
  *  3. Emails the committee with the abstract and the file attached.
  *  4. Emails the author a confirmation.
  *
+ * It also keeps the visitor count shown in the site footer (see doGet).
+ *
  * Setup: see tools/SUBMISSION-FORM-SETUP.md in this repository.
  */
 
@@ -68,7 +70,33 @@ function doPost(e) {
   }
 }
 
-function doGet() { return json_({ ok: true, service: CONFERENCE + ' submissions' }); }
+/**
+ * Visitor counter. The website calls ?counter=visitors once per new visitor
+ * (with &hit=1) and without hit to just read the total.
+ */
+var COUNTER_START = 0;
+
+function doGet(e) {
+  var p = (e && e.parameter) || {};
+  if (p.counter === 'visitors') {
+    var props = PropertiesService.getScriptProperties();
+    var n;
+    if (p.hit === '1') {
+      var lock = LockService.getScriptLock();
+      lock.waitLock(10000);
+      try {
+        n = Number(props.getProperty('visitors') || COUNTER_START) + 1;
+        props.setProperty('visitors', String(n));
+      } finally {
+        lock.releaseLock();
+      }
+    } else {
+      n = Number(props.getProperty('visitors') || COUNTER_START);
+    }
+    return json_({ ok: true, visitors: n });
+  }
+  return json_({ ok: true, service: CONFERENCE + ' submissions' });
+}
 
 function getFolder_() {
   var it = DriveApp.getFoldersByName(FOLDER_NAME);
